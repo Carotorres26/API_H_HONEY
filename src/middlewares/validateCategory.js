@@ -13,7 +13,7 @@ export const validateCategoryDeletion = async (req, res, next) => {
             return res.status(400).json({ error: 'No puedes eliminar una categoría con ejemplares asignados' });
         }
 
-        next(); // Continuar con la eliminación si la categoría está vacía
+        next();
     } catch (error) {
         res.status(500).json({ error: 'Error en la validación de la categoría' });
     }
